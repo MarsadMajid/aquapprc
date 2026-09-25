@@ -24,6 +24,8 @@ Confirmed business contact numbers:
 - **Owner & Executive Sales:** +92 300 6661900 (WhatsApp `923006661900`)
 - **Sales Manager & Co-Owner:** +92 300 2828860 (WhatsApp `923002828860`)
 - **Distributor & Wholesale Outlet:** 03087500960 (WhatsApp `923087500960`)
+- **Distributor & Wholesale Supplier:** 03007223367 (WhatsApp `923007223367`)
+- **Shop Sales Desk:** 03187979996 (WhatsApp `923187979996`)
 - **Sales & Online Support:** 03006606097 (WhatsApp `923006606097`)
 - **Email:** **sales@aquapprc.com**
 

@@ -39,10 +39,11 @@ function publicUrl(value: string | undefined): string {
 
 export const FACTORY_CONTACTS = [
   {
-    role: "Owner & Executive Sales",
+    role: "Factory Owner & Executive Sales",
     name: "Factory Direct",
     phone: "+92 300 6661900",
     whatsapp: "923006661900",
+    location: "factory",
     description: "Direct factory inquiries, bulk specifications & executive orders",
   },
   {
@@ -50,22 +51,42 @@ export const FACTORY_CONTACTS = [
     name: "Management & Sales",
     phone: "+92 300 2828860",
     whatsapp: "923002828860",
+    location: "factory",
     description: "Dealer onboarding, B2B quotes & trade account inquiries",
   },
   {
-    role: "Distributor & Wholesale Outlet",
-    name: "Asia Pipe Store (Shop)",
-    phone: "+92 308 7500960",
-    whatsapp: "923087500960",
-    description: "Wholesale distribution, shop stockists & immediate retail collection",
-  },
-  {
-    role: "Online & Retail Support",
-    name: "Sales & Web Inquiries",
+    role: "Sales & Web Inquiries",
+    name: "Online & Direct Sales",
     phone: "+92 300 6606097",
     whatsapp: "923006606097",
-    description: "Online catalog support, quote assistance & general product guidance",
+    location: "factory",
+    description: "Online catalog support, quote assistance & direct sales",
   },
+  {
+    role: "Distributor & Wholesale Supplier",
+    name: "Wholesale Supplier & Sales",
+    phone: "+92 300 7223367",
+    whatsapp: "923007223367",
+    location: "both",
+    description: "Distributor sales, wholesale supply & factory orders",
+  },
+  {
+    role: "Asia Pipe Store Owner",
+    name: "Wholesale & Distribution",
+    phone: "+92 308 7500960",
+    whatsapp: "923087500960",
+    location: "shop",
+    description: "Wholesale distribution, shop stockists & retail management",
+  },
+  {
+    role: "Asia Pipe Store Sales Person",
+    name: "Shop Sales Desk",
+    phone: "+92 318 7979996",
+    whatsapp: "923187979996",
+    location: "shop",
+    description: "Retail sales counter, stock inquiries & instant local collection",
+  },
+
 ];
 
 export const FACTORY_INFO = {

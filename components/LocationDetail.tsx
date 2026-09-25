@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { MapPin, ArrowUpRight, Copy, Phone } from "lucide-react";
+import { MapPin, ArrowUpRight, Copy, MessageCircle } from "lucide-react";
 import { FACTORY_INFO } from "@/data/factoryData";
 import type { LocationRecord } from "@/data/locations";
 export default function LocationDetail({
@@ -18,6 +18,13 @@ export default function LocationDetail({
       setStatus(`Copy manually: ${value}`);
     }
   }
+
+  const contacts = FACTORY_INFO.contacts.filter(c =>
+    l.slug === "asia-pipe-store" 
+      ? (c.location === "shop" || c.location === "both") 
+      : (c.location === "factory" || c.location === "both")
+  );
+
   return (
     <section className="container location-detail">
       <div className="map-panel">
@@ -88,12 +95,20 @@ export default function LocationDetail({
           {status}
         </p>
         <div className="location-contact">
-          <p className="eyebrow">AQUA PPRC CONTACT DIRECTORY</p>
-          {FACTORY_INFO.contacts.map((c) => (
-            <div key={c.phone} style={{ marginBottom: "0.5rem" }}>
+          <p className="eyebrow">
+            {l.slug === "asia-pipe-store" ? "ASIA PIPE STORE CONTACTS" : "FACTORY DIRECT CONTACTS"}
+          </p>
+          {contacts.map((c) => (
+            <div key={c.phone} style={{ marginBottom: "0.6rem" }}>
               <span className="small muted" style={{ display: "block", fontWeight: 600 }}>{c.role}</span>
-              <a href={`tel:${c.phone}`} style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem" }}>
-                <Phone size={15} /> {c.phone} ({c.name})
+              <a
+                href={`https://wa.me/${c.whatsapp}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", fontWeight: 600 }}
+                title={`Open WhatsApp chat with ${c.role}`}
+              >
+                <MessageCircle size={16} style={{ color: "#25D366" }} /> {c.phone} ({c.name})
               </a>
             </div>
           ))}

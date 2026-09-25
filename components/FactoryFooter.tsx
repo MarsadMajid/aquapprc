@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, MessageCircle } from "lucide-react";
 import { FACTORY_INFO } from "@/data/factoryData";
 import { NAVIGATION } from "@/data/navigation";
 
@@ -34,17 +34,23 @@ export default function FactoryFooter() {
           <div>
             <h3>Aqua PPRC Inquiries</h3>
             {FACTORY_INFO.contacts.map((c) => (
-              <div key={c.phone} style={{ marginBottom: "0.5rem" }}>
-                <strong style={{ fontSize: "0.85rem", display: "block" }}>{c.role}</strong>
-                <a href={`tel:${c.phone}`} style={{ display: "inline-block", marginRight: "0.5rem" }}>
-                  {c.phone}
+              <div key={c.phone} style={{ marginBottom: "0.6rem" }}>
+                <strong style={{ fontSize: "0.85rem", display: "block", color: "var(--brand-dark, #047348)" }}>{c.role}</strong>
+                <a
+                  href={`https://wa.me/${c.whatsapp}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ display: "inline-flex", alignItems: "center", gap: "0.35rem", fontWeight: 600 }}
+                  title={`Open WhatsApp chat with ${c.role}`}
+                >
+                  <MessageCircle size={15} style={{ color: "#25D366" }} /> {c.phone}
                 </a>
               </div>
             ))}
             <a href={`mailto:${FACTORY_INFO.email}`}>{FACTORY_INFO.email}</a>
             <address>{FACTORY_INFO.address}</address>
             <p>
-              Products are saved as a quote request. Contact us for latest pricing and factory quotes.
+              Products are saved as a quote request. Contact us via WhatsApp for latest pricing and factory quotes.
             </p>
           </div>
         </div>
