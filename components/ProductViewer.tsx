@@ -147,8 +147,7 @@ export default function ProductViewer({
                   ? "(max-width:800px) 100vw, 55vw"
                   : "(max-width:800px) 100vw, 60vw"
               }
-              preload={hero}
-              loading={hero ? undefined : "eager"}
+              priority={hero}
               className="model-poster"
             />
             {!failed && (
