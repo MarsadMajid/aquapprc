@@ -26,6 +26,7 @@ export default function ProductShowcaseWithImages() {
   );
   return (
     <section className="catalog-section container">
+      <h2 className="sr-only">Aqua PPRC Products List</h2>
       <div className="catalog-toolbar">
         <div className="filters">
           {["all", "pipes", "fittings", "valves"].map((f) => (

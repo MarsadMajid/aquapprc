@@ -45,6 +45,7 @@ const itemListSchema = {
 function CatalogueSkeleton() {
   return (
     <section className="catalog-section container" aria-busy="true" aria-label="Loading products">
+      <h2 className="sr-only">Aqua PPRC Products List</h2>
       <div className="catalog-toolbar">
         <div className="filters">
           <button className="filter active" disabled>All products <span>{FACTORY_PRODUCTS.length}</span></button>
