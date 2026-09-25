@@ -3,7 +3,7 @@ import { FACTORY_INFO, FACTORY_PRODUCTS } from "@/data/factoryData";
 import { LOCATIONS } from "@/data/locations";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = FACTORY_INFO.siteUrl || "https://aquapprc.com";
+  const baseUrl = FACTORY_INFO.siteUrl || "https://www.aquapprc.com";
   const routes = [
     "",
     "/products",

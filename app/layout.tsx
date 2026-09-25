@@ -6,7 +6,7 @@ import InquiryProvider from "@/components/InquiryProvider";
 import FactoryHeader from "@/components/FactoryHeader";
 import FactoryFooter from "@/components/FactoryFooter";
 
-const baseUrl = FACTORY_INFO.siteUrl || "https://aquapprc.com";
+const baseUrl = FACTORY_INFO.siteUrl || "https://www.aquapprc.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),

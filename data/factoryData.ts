@@ -28,12 +28,12 @@ export interface FactoryProduct {
 }
 
 function publicUrl(value: string | undefined): string {
-  if (!value) return "";
+  if (!value) return "https://www.aquapprc.com";
   try {
     const url = new URL(value);
-    return ["https:", "http:"].includes(url.protocol) ? url.origin : "";
+    return ["https:", "http:"].includes(url.protocol) ? url.origin : "https://www.aquapprc.com";
   } catch {
-    return "";
+    return "https://www.aquapprc.com";
   }
 }
 
