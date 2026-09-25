@@ -27,7 +27,7 @@ export default function Page() {
         <p>Click any contact number below to start a direct WhatsApp chat with our factory management or Asia Pipe Store team.</p>
 
         <div style={{ marginTop: "1.5rem" }}>
-          <h3 style={{ fontSize: "1.1rem", marginBottom: "0.75rem", color: "var(--brand-dark, #047348)" }}>
+          <h3 style={{ fontSize: "1.1rem", marginBottom: "0.75rem", color: "#064e3b", fontWeight: 700 }}>
             Aqua PPRC Factory Contacts (Millat Road)
           </h3>
           <div className="actions" style={{ flexWrap: "wrap", gap: "0.75rem", marginBottom: "1.5rem" }}>
@@ -38,14 +38,25 @@ export default function Page() {
                 href={`https://wa.me/${c.whatsapp}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ fontSize: "0.875rem", padding: "0.5rem 1rem", display: "inline-flex", alignItems: "center", gap: "0.4rem" }}
+                style={{
+                  fontSize: "0.875rem",
+                  padding: "0.6rem 1.1rem",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "0.5rem",
+                  background: "#075e54",
+                  color: "#ffffff",
+                  borderRadius: "6px",
+                  fontWeight: 700,
+                  textShadow: "none",
+                }}
               >
-                <MessageCircle size={17} style={{ color: "#25D366" }} /> {c.role}: {c.phone}
+                <MessageCircle size={18} style={{ color: "#25D366" }} /> {c.role}: {c.phone}
               </a>
             ))}
           </div>
 
-          <h3 style={{ fontSize: "1.1rem", marginBottom: "0.75rem", color: "var(--brand-dark, #047348)" }}>
+          <h3 style={{ fontSize: "1.1rem", marginBottom: "0.75rem", color: "#064e3b", fontWeight: 700 }}>
             Asia Pipe Store Contacts (Railway Road Outlet & Wholesale)
           </h3>
           <div className="actions" style={{ flexWrap: "wrap", gap: "0.75rem" }}>
@@ -56,9 +67,20 @@ export default function Page() {
                 href={`https://wa.me/${c.whatsapp}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ fontSize: "0.875rem", padding: "0.5rem 1rem", display: "inline-flex", alignItems: "center", gap: "0.4rem" }}
+                style={{
+                  fontSize: "0.875rem",
+                  padding: "0.6rem 1.1rem",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "0.5rem",
+                  background: "#1e293b",
+                  color: "#ffffff",
+                  borderRadius: "6px",
+                  fontWeight: 700,
+                  borderColor: "#1e293b",
+                }}
               >
-                <MessageCircle size={17} style={{ color: "#25D366" }} /> {c.role}: {c.phone}
+                <MessageCircle size={18} style={{ color: "#25D366" }} /> {c.role}: {c.phone}
               </a>
             ))}
           </div>
