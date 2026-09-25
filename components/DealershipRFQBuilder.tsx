@@ -21,13 +21,13 @@ export default function DealershipRFQBuilder() {
     <section className="section dealership" id="dealership">
       <div className="container dealership-grid">
         <div>
-          <p className="eyebrow">05 / GROW WITH GALAXY</p>
+          <p className="eyebrow">05 / GROW WITH AQUA PPRC</p>
           <h2>
             Local knowledge.
             <br />A shared ambition.
           </h2>
           <p className="dealership-intro">
-            Stockists, retailers and distributors: let’s discuss how Galaxy can
+            Stockists, retailers and distributors: let’s discuss how Aqua PPRC can
             fit into your business.
           </p>
           <ul className="benefit-list">
@@ -72,7 +72,7 @@ export default function DealershipRFQBuilder() {
                 setError("");
                 setMessage(
                   [
-                    "GALAXY PPRC — DEALERSHIP INQUIRY",
+                    "AQUA PPRC — DEALERSHIP INQUIRY",
                     `Business: ${values.company.trim()}`,
                     `Contact person: ${values.name.trim()}`,
                     `Phone: ${values.phone.trim()}`,

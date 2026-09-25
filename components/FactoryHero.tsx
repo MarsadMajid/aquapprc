@@ -10,7 +10,7 @@ export default function FactoryHero() {
           <span>
             <span className="status-dot" /> ENGINEER YOUR NEXT CONNECTION
           </span>
-          <span>FAISALABAD, PAKISTAN / GALAXY PPRC</span>
+          <span>FAISALABAD, PAKISTAN / AQUA PPRC</span>
         </div>
         <div className="showroom-hero-grid">
           <div className="hero-copy">

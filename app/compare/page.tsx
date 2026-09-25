@@ -6,7 +6,7 @@ import { pageMetadata } from "@/lib/metadata";
 export const metadata = pageMetadata(
   "Compare products",
   "/compare",
-  "Compare construction and connection details for up to three Galaxy products.",
+  "Compare construction and connection details for up to three Aqua PPRC products.",
 );
 export default async function Page({
   searchParams,

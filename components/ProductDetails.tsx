@@ -1,27 +1,36 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { Plus, Printer, ArrowRight } from "lucide-react";
-import { TECHNICAL_NOTE, type FactoryProduct } from "@/data/factoryData";
+import { Plus, Printer, ArrowRight, Phone } from "lucide-react";
+import { TECHNICAL_NOTE, FACTORY_INFO, type FactoryProduct } from "@/data/factoryData";
 import { useInquiry } from "./InquiryProvider";
 import CompareButton from "./CompareButton";
 import SpecModal from "./SpecModal";
+
 export default function ProductDetails({
   product: p,
 }: {
   product: FactoryProduct;
 }) {
   const { add, ready } = useInquiry(),
-    [size, setSize] = useState(""),
+    [size, setSize] = useState(p.sizes?.[0] || ""),
     [quantity, setQuantity] = useState(""),
     [pressure, setPressure] = useState(p.requestedClass),
     [unit, setUnit] = useState(p.category === "pipes" ? "metres" : "pieces"),
     [sheet, setSheet] = useState(false);
+
   return (
     <div className="detail-information">
       <p className="eyebrow">{p.label}</p>
       <h1>{p.name}</h1>
       <p className="detail-description">{p.description}</p>
+      <div className="price-tag" style={{ margin: "1rem 0", padding: "0.75rem 1rem", background: "rgba(0, 168, 89, 0.08)", borderRadius: "8px", border: "1px solid rgba(0, 168, 89, 0.2)" }}>
+        <strong style={{ color: "var(--brand-dark, #047348)" }}>Pricing: Contact for quote</strong>
+        <p className="small muted" style={{ margin: "0.25rem 0 0 0" }}>
+          Factory direct prices depend on quantity, specifications and delivery destination.
+        </p>
+      </div>
+
       <dl className="detail-facts">
         <div>
           <dt>Construction</dt>
@@ -36,6 +45,37 @@ export default function ProductDetails({
           <dd>{p.requestedClass}</dd>
         </div>
       </dl>
+
+      {!!p.sizes?.length && (
+        <div style={{ marginBottom: "1.25rem" }}>
+          <span style={{ fontSize: "0.85rem", fontWeight: 600, display: "block", marginBottom: "0.4rem" }}>
+            Available Sizes:
+          </span>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "0.4rem" }}>
+            {p.sizes.map((s) => (
+              <button
+                key={s}
+                type="button"
+                className={`size-badge ${size === s ? "active" : ""}`}
+                style={{
+                  padding: "0.3rem 0.6rem",
+                  fontSize: "0.825rem",
+                  borderRadius: "4px",
+                  border: size === s ? "2px solid #00a859" : "1px solid #ccc",
+                  background: size === s ? "#00a859" : "#fff",
+                  color: size === s ? "#fff" : "#333",
+                  cursor: "pointer",
+                  fontWeight: size === s ? 600 : 400,
+                }}
+                onClick={() => setSize(s)}
+              >
+                {s}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
       {!!p.verifiedSpecifications?.length && (
         <dl className="detail-facts">
           {p.verifiedSpecifications.map((spec) => (
@@ -46,6 +86,7 @@ export default function ProductDetails({
           ))}
         </dl>
       )}
+
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -59,7 +100,7 @@ export default function ProductDetails({
               maxLength={80}
               value={size}
               onChange={(e) => setSize(e.target.value)}
-              placeholder="e.g. 25 mm / confirm"
+              placeholder="e.g. 25 mm"
             />
           </label>
           <label className="field">
@@ -95,7 +136,7 @@ export default function ProductDetails({
           </label>
         </div>
         <button disabled={!ready} className="button primary detail-add">
-          <Plus size={19} /> Add to quote
+          <Plus size={19} /> Add to quote list
         </button>
       </form>
       <div className="detail-actions">

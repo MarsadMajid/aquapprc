@@ -4,7 +4,7 @@ import { pageMetadata } from "@/lib/metadata";
 export const metadata = pageMetadata(
   "Help me choose",
   "/product-finder",
-  "Tell us about your project and prepare a Galaxy product inquiry.",
+  "Tell us about your project and prepare an Aqua PPRC product inquiry.",
 );
 export default function Page() {
   return (

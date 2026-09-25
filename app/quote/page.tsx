@@ -4,7 +4,7 @@ import { pageMetadata } from "@/lib/metadata";
 export const metadata = pageMetadata(
   "Your quote list",
   "/quote",
-  "Review your product schedule, prepare a quote request and share it directly with Galaxy PPRC.",
+  "Review your product schedule, prepare a quote request and share it directly with Aqua PPRC.",
 );
 export default function Page() {
   return (

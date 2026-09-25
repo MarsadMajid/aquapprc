@@ -71,11 +71,11 @@ export default function FactoryHeader() {
             className="brand"
             href="/"
             onClick={close}
-            aria-label="Galaxy PPRC home"
+            aria-label="Aqua PPRC home"
           >
-            <span className="brand-mark">G</span>
+            <span className="brand-mark">A</span>
             <span>
-              GALAXY<span className="brand-sub">PPRC PIPES & FITTINGS</span>
+              AQUA<span className="brand-sub">PPRC PIPES & FITTINGS</span>
             </span>
           </Link>
           <nav className="guided-desktop" aria-label="Main navigation">
@@ -178,7 +178,7 @@ export default function FactoryHeader() {
       </nav>
       {mobile && (
         <Modal
-          title="Explore Galaxy"
+          title="Explore Aqua PPRC"
           onClose={() => setMobile(false)}
           className="navigation-dialog"
         >

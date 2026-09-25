@@ -79,7 +79,7 @@ function PipeMark() {
     ctx.fillStyle = "#effff5";
     ctx.font = "600 64px Arial";
     ctx.textAlign = "center";
-    ctx.fillText("GALAXY  PPRC", 512, 87);
+    ctx.fillText("AQUA  PPRC", 512, 87);
     return new THREE.CanvasTexture(canvas);
   }, []);
   useEffect(() => () => texture.dispose(), [texture]);

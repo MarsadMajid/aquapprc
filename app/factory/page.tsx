@@ -5,14 +5,14 @@ import { pageMetadata } from "@/lib/metadata";
 export const metadata = pageMetadata(
   "Our factory",
   "/factory",
-  "Learn about Galaxy PPRC factory inquiries, product documentation and our Millat Road location.",
+  "Learn about Aqua PPRC factory inquiries, product documentation and our Millat Road location.",
 );
 export default function Page() {
   return (
     <>
       <PageIntro
         path="/factory"
-        eyebrow="GALAXY / FAISALABAD"
+        eyebrow="AQUA PPRC / FAISALABAD"
         title="Our factory"
         description="Our manufacturing address is Chak 117 JB, Millat Road, Faisalabad. Start here to discuss your product and documentation requirements."
       />

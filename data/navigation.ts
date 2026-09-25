@@ -6,6 +6,7 @@ export type NavigationEntry = {
   match: string[];
   children?: NavigationEntry[];
 };
+
 const entry = (
   id: string,
   label: string,
@@ -13,13 +14,15 @@ const entry = (
   description: string,
   match = [href.split("?")[0]],
 ): NavigationEntry => ({ id, label, href, description, match });
-export const HOME = entry("home", "Home", "/", "Start with Galaxy");
+
+export const HOME = entry("home", "Home", "/", "Start with Aqua PPRC");
 export const QUOTE = entry(
   "quote",
   "Quote list",
   "/quote",
   "Review your saved products and share a request",
 );
+
 export const NAVIGATION: NavigationEntry[] = [
   {
     ...entry("products", "Products", "/products", "Find the right connection", [
@@ -39,19 +42,19 @@ export const NAVIGATION: NavigationEntry[] = [
         "pipes",
         "Pipes",
         "/products?category=pipes",
-        "PN20 and fiber composite pipes",
+        "Single-layer & 2-layer PPRC pipes",
       ),
       entry(
         "fittings",
         "Fittings",
         "/products?category=fittings",
-        "Elbows, tees and threaded connections",
+        "Sockets, elbows, tees & threaded fittings",
       ),
       entry(
         "valves",
         "Valves",
         "/products?category=valves",
-        "Explore flow-control products",
+        "Gate valves, ball valves & flow control",
       ),
       entry(
         "finder",
@@ -74,7 +77,7 @@ export const NAVIGATION: NavigationEntry[] = [
     ],
   },
   {
-    ...entry("about", "About Galaxy", "/factory", "Meet the business", [
+    ...entry("about", "About Aqua PPRC", "/factory", "Meet the business", [
       "/factory",
       "/dealership",
     ]),
@@ -83,7 +86,7 @@ export const NAVIGATION: NavigationEntry[] = [
         "factory",
         "Our factory",
         "/factory",
-        "Manufacturing information and our story",
+        "Manufacturing information and quality assurance",
       ),
       entry(
         "dealer",
@@ -102,23 +105,24 @@ export const NAVIGATION: NavigationEntry[] = [
         "locations",
         "Locations & contact",
         "/locations",
-        "Choose the factory or the retail shop",
+        "Choose the factory or retail outlet",
       ),
       entry(
         "plant",
-        "Galaxy factory",
+        "Aqua PPRC factory",
         "/locations/factory",
-        "Millat Road — commercial inquiries",
+        "Millat Road — commercial & factory direct",
       ),
       entry(
         "shop",
         "Asia Pipe Store",
         "/locations/asia-pipe-store",
-        "Railway Road — local retail and collection",
+        "Railway Road — retail outlet & wholesale depot",
       ),
     ],
   },
 ];
+
 export function matchesRoute(item: NavigationEntry, pathname: string) {
   return item.match.some((path) =>
     path === "/"
@@ -126,11 +130,13 @@ export function matchesRoute(item: NavigationEntry, pathname: string) {
       : pathname === path || pathname.startsWith(`${path}/`),
   );
 }
+
 export function navigationHref(item: NavigationEntry, compared: string[] = []) {
   return item.id === "compare" && compared.length
     ? `/compare?ids=${compared.join(",")}`
     : item.href;
 }
+
 export function routeLabel(pathname: string) {
   return (
     [HOME, QUOTE, ...NAVIGATION.flatMap((group) => group.children || [])].find(

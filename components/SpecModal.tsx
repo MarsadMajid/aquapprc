@@ -20,7 +20,7 @@ export default function SpecModal({
       printable
     >
       <div className="modal-content">
-        <p className="eyebrow">GALAXY PPRC / PRODUCT INFORMATION</p>
+        <p className="eyebrow">AQUA PPRC / PRODUCT INFORMATION</p>
         <h3 className="sheet-title">{product.name}</h3>
         <p>{product.description}</p>
         <table className="spec-table sheet-table">

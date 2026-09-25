@@ -4,7 +4,7 @@ import { pageMetadata } from "@/lib/metadata";
 export const metadata = pageMetadata(
   "Specifications & documents",
   "/technical",
-  "Galaxy product reference, printable product information and approved-document inquiries.",
+  "Aqua PPRC product reference, printable product information and approved-document inquiries.",
 );
 export default function Page() {
   return (

@@ -38,7 +38,7 @@ export default function ProductShowcaseWithImages() {
               {f === "all" ? "All products" : f}
               <span>
                 {f === "all"
-                  ? 6
+                  ? FACTORY_PRODUCTS.length
                   : FACTORY_PRODUCTS.filter((p) => p.category === f).length}
               </span>
             </button>

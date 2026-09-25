@@ -26,7 +26,7 @@ export default function ProductCard({
           sizes="(max-width:600px) 100vw, (max-width:1000px) 50vw, 33vw"
         />
         <span className="product-number">
-          GALAXY / {p.category.toUpperCase()}
+          AQUA / {p.category.toUpperCase()}
         </span>
         <span className="zoom-icon">
           <ArrowUpRight size={18} />

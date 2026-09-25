@@ -26,7 +26,7 @@ export default function InquiryReview({
     );
     const a = document.createElement("a");
     a.href = url;
-    a.download = "galaxy-inquiry.txt";
+    a.download = "aqua-inquiry.txt";
     a.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
@@ -80,7 +80,7 @@ export default function InquiryReview({
       <div className="actions no-print">
         <a
           className="button secondary"
-          href={`mailto:${FACTORY_INFO.email}?subject=${encodeURIComponent("Galaxy PPRC inquiry")}&body=${encodeURIComponent(message)}`}
+          href={`mailto:${FACTORY_INFO.email}?subject=${encodeURIComponent("Aqua PPRC inquiry")}&body=${encodeURIComponent(message)}`}
         >
           <Mail size={17} /> Email draft
         </a>
@@ -93,7 +93,7 @@ export default function InquiryReview({
       </div>
       {printOpen && (
         <Modal
-          title="Galaxy PPRC inquiry"
+          title="Aqua PPRC inquiry"
           onClose={() => setPrintOpen(false)}
           printable
         >
@@ -114,7 +114,7 @@ export default function InquiryReview({
       <p className="muted small">
         {url
           ? "WhatsApp opens a draft. Your quote request is only sent after you press Send in WhatsApp."
-          : "Copy your quote request to share with your Galaxy PPRC representative. Direct WhatsApp contact will be available once the factory number is confirmed."}
+          : "Copy your quote request to share with your Aqua PPRC representative."}
       </p>
       <p className="muted small">
         Product selections are saved in this browser. Contact details stay in

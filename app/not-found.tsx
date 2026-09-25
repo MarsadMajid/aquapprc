@@ -4,7 +4,7 @@ export default function NotFound() {
     <section className="section container empty-state">
       <p className="eyebrow">404 / CONNECTION NOT FOUND</p>
       <h1>This page isn’t in our range.</h1>
-      <p>Explore the catalogue or return to the Galaxy homepage.</p>
+      <p>Explore the catalogue or return to the Aqua PPRC homepage.</p>
       <div className="actions">
         <Link className="button primary" href="/products">
           Explore products

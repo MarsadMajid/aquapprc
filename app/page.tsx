@@ -8,7 +8,7 @@ import { pageMetadata } from "@/lib/metadata";
 export const metadata = pageMetadata(
   "PPRC pipes, fittings & possibilities",
   "/",
-  "Explore Galaxy PPRC in 3D. Compare pipes and fittings, build a factory inquiry and find our Faisalabad locations.",
+  "Explore Aqua PPRC in 3D. Compare pipes and fittings, build a factory inquiry and find our Faisalabad locations.",
 );
 export default function Page() {
   return (
@@ -18,7 +18,7 @@ export default function Page() {
       <section className="section container">
         <div className="section-heading">
           <div>
-            <p className="eyebrow">THE GALAXY COLLECTION</p>
+            <p className="eyebrow">THE AQUA PPRC COLLECTION</p>
             <h2>
               Different parts.
               <br />A complete perspective.
@@ -61,7 +61,7 @@ export default function Page() {
                   fill
                   sizes="(max-width:700px) 100vw, 33vw"
                 />
-                <span className="mono">0{i + 1} / GALAXY</span>
+                <span className="mono">0{i + 1} / AQUA PPRC</span>
               </div>
               <div>
                 <h3>
@@ -98,9 +98,9 @@ export default function Page() {
             </p>
             <Link
               className="button secondary"
-              href="/products/fiber-composite-pipe"
+              href="/products/single-layer-pprc-pipe"
             >
-              Explore fiber composite <ArrowRight size={18} />
+              Explore PPRC pipes <ArrowRight size={18} />
             </Link>
             <span className="small muted">
               Illustrative construction. Not an engineering drawing.
@@ -138,7 +138,7 @@ export default function Page() {
       <section className="partner-strip">
         <div className="container">
           <div>
-            <p className="eyebrow light">GROW WITH GALAXY</p>
+            <p className="eyebrow light">GROW WITH AQUA PPRC</p>
             <h2>
               Local knowledge.
               <br />

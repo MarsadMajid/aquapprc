@@ -5,7 +5,7 @@ import { pageMetadata } from "@/lib/metadata";
 export const metadata = pageMetadata(
   "Our locations",
   "/locations",
-  "Find the Galaxy PPRC factory on Millat Road and Asia Pipe Store on Railway Road, Faisalabad.",
+  "Find the Aqua PPRC factory on Millat Road and Asia Pipe Store on Railway Road, Faisalabad.",
 );
 export default function Page() {
   return (
@@ -18,20 +18,20 @@ export default function Page() {
       />
       <PlantLocation />
       <section className="container contact-next">
-        <h2>Talk to Galaxy</h2>
-        <p>For product questions, factory quotes and dealership requests.</p>
-        <div className="actions">
-          <a className="button primary" href={`tel:+${FACTORY_INFO.whatsapp}`}>
-            Call Galaxy: 0321-6661900
-          </a>
+        <h2>Talk to Aqua PPRC</h2>
+        <p>For product questions, factory quotes, wholesale orders and dealership requests.</p>
+        <div className="actions" style={{ flexWrap: "wrap", gap: "0.75rem" }}>
+          {FACTORY_INFO.contacts.map((c) => (
+            <a key={c.phone} className="button primary" href={`tel:${c.phone}`} style={{ fontSize: "0.875rem", padding: "0.5rem 1rem" }}>
+              {c.role}: {c.phone}
+            </a>
+          ))}
+        </div>
+        <div style={{ marginTop: "1rem" }}>
           <a className="technical-link" href={`mailto:${FACTORY_INFO.email}`}>
             {FACTORY_INFO.email}
           </a>
         </div>
-        <p className="muted small">
-          This is the Galaxy inquiry desk. A separate retail shop number is not
-          listed.
-        </p>
       </section>
     </>
   );

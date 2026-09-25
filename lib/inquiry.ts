@@ -45,7 +45,7 @@ export function buildQuote(
   names: Record<string, string>,
 ): string {
   return [
-    "GALAXY PPRC — FACTORY QUOTE REQUEST",
+    "AQUA PPRC — FACTORY QUOTE REQUEST",
     `Customer / company: ${customer.name.trim()}`,
     `Contact: ${customer.phone.trim()}`,
     `Delivery city: ${customer.city.trim()}`,

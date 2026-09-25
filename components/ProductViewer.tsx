@@ -110,7 +110,7 @@ export default function ProductViewer({
       data-viewer-active={active}
     >
       <div className="viewer-top">
-        <span className="mono">GALAXY / {product.category.toUpperCase()}</span>
+        <span className="mono">AQUA / {product.category.toUpperCase()}</span>
         <div className="segmented">
           <button
             aria-pressed={!enabled}

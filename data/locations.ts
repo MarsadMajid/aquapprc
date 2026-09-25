@@ -11,7 +11,7 @@ export type LocationRecord = {
 export const LOCATIONS: LocationRecord[] = [
   {
     slug: "factory",
-    name: "Galaxy PPRC factory",
+    name: "Aqua PPRC factory",
     role: "MANUFACTURING & FACTORY INQUIRIES",
     address: "Chak 117 JB, Millat Road, Faisalabad, Punjab, Pakistan",
     lat: 31.5004234,

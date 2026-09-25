@@ -88,16 +88,21 @@ export default function LocationDetail({
           {status}
         </p>
         <div className="location-contact">
-          <p className="eyebrow">GALAXY INQUIRIES</p>
-          <a href={`tel:+${FACTORY_INFO.whatsapp}`}>
-            <Phone size={18} /> 0321-6661900
-          </a>
+          <p className="eyebrow">AQUA PPRC CONTACT DIRECTORY</p>
+          {FACTORY_INFO.contacts.map((c) => (
+            <div key={c.phone} style={{ marginBottom: "0.5rem" }}>
+              <span className="small muted" style={{ display: "block", fontWeight: 600 }}>{c.role}</span>
+              <a href={`tel:${c.phone}`} style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem" }}>
+                <Phone size={15} /> {c.phone} ({c.name})
+              </a>
+            </div>
+          ))}
           <a href={`mailto:${FACTORY_INFO.email}`}>{FACTORY_INFO.email}</a>
         </div>
         <p className="muted small">
           {l.slug === "factory"
             ? "Please arrange your factory visit before travelling."
-            : "Visit the retail outlet for local purchasing and collection inquiries. The contact above is the Galaxy inquiry desk."}{" "}
+            : "Visit Asia Pipe Store for local retail purchasing, immediate stock collection, and wholesale trade distribution."}{" "}
           If the map does not load, use the directions or listing link.
         </p>
       </div>

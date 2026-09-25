@@ -23,7 +23,7 @@ export default function FactorySpecTables() {
         >
           <table className="spec-table">
             <caption>
-              Galaxy product reference — dimensions and certified ratings
+              Aqua PPRC product reference — dimensions and certified ratings
               available on confirmation
             </caption>
             <thead>

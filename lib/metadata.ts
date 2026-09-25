@@ -10,7 +10,7 @@ export function pageMetadata(
     description,
     ...(FACTORY_INFO.siteUrl ? { alternates: { canonical: path } } : {}),
     openGraph: {
-      title: `${title} | Galaxy PPRC`,
+      title: `${title} | Aqua PPRC`,
       description,
       type: "website",
       ...(FACTORY_INFO.siteUrl

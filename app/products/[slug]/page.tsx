@@ -32,7 +32,7 @@ export default async function Page({
     "@type": "Product",
     name: p.name,
     description: p.description,
-    brand: { "@type": "Brand", name: "Galaxy PPRC" },
+    brand: { "@type": "Brand", name: "Aqua PPRC" },
     ...(FACTORY_INFO.siteUrl
       ? {
           image: `${FACTORY_INFO.siteUrl}${p.poster}`,

@@ -8,20 +8,20 @@ import FactoryFooter from "@/components/FactoryFooter";
 export const metadata: Metadata = {
   icons: { icon: "/icon.svg" },
   title: {
-    default: "Galaxy PPRC | Pipes & Fittings Factory, Faisalabad",
-    template: "%s | Galaxy PPRC",
+    default: "Aqua PPRC | Pipes & Fittings Factory, Faisalabad",
+    template: "%s | Aqua PPRC",
   },
   description:
-    "Explore Galaxy PPRC pipes, fittings and valves. Request a factory quote or discuss dealership opportunities at Chak 117 JB, Millat Road, Faisalabad.",
+    "Explore Aqua PPRC pipes, fittings and valves. Request a factory quote or discuss dealership opportunities at Chak 117 JB, Millat Road, Faisalabad.",
   ...(FACTORY_INFO.siteUrl
     ? {
         metadataBase: new URL(FACTORY_INFO.siteUrl),
       }
     : {}),
   openGraph: {
-    title: "Every connection starts with Galaxy.",
+    title: "Every connection starts with Aqua PPRC.",
     description:
-      "PPRC pipes and fittings. Factory quotes and dealership inquiries from Faisalabad, Pakistan.",
+      "Aqua PPRC pipes and fittings. Factory quotes and dealership inquiries from Faisalabad, Pakistan.",
     type: "website",
     locale: "en_PK",
     ...(FACTORY_INFO.siteUrl
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
               url: "/images/products/galaxy-factory-plant.jpg",
               width: 1376,
               height: 768,
-              alt: "Galaxy PPRC illustrative factory visual",
+              alt: "Aqua PPRC factory visual",
             },
           ],
         }
