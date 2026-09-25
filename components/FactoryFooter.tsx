@@ -35,7 +35,7 @@ export default function FactoryFooter() {
             <h3>Aqua PPRC Inquiries</h3>
             {FACTORY_INFO.contacts.map((c) => (
               <div key={c.phone} style={{ marginBottom: "0.6rem" }}>
-                <strong style={{ fontSize: "0.85rem", display: "block", color: "var(--brand-dark, #047348)" }}>{c.role}</strong>
+                <strong style={{ fontSize: "0.85rem", display: "block", color: "#86efac" }}>{c.role}</strong>
                 <a
                   href={`https://wa.me/${c.whatsapp}`}
                   target="_blank"
