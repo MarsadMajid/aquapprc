@@ -97,9 +97,15 @@ export const FACTORY_INFO = {
   whatsapp: (
     process.env.NEXT_PUBLIC_FACTORY_WHATSAPP || "923006661900"
   ).replace(/\D/g, ""),
-  email: process.env.NEXT_PUBLIC_FACTORY_EMAIL || "sales@aquapprc.com",
+  email: process.env.NEXT_PUBLIC_FACTORY_EMAIL || "aquapprcpipes@gmail.com",
   siteUrl: publicUrl(process.env.NEXT_PUBLIC_SITE_URL),
   shopUrl: publicUrl(process.env.NEXT_PUBLIC_SHOP_URL),
+  socials: {
+    instagram: "https://www.instagram.com/aquapprc/",
+    facebook: "https://www.facebook.com/profile.php?id=61594681299748",
+    tiktok: "https://www.tiktok.com/@aquapprc",
+    x: "https://x.com/aquapprc",
+  },
   flagshipDepot: {
     name: "Asia Pipe Store",
     location: "Railway Road, Sadiq Market, Faisalabad",

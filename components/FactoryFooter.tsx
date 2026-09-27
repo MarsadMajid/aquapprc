@@ -52,6 +52,15 @@ export default function FactoryFooter() {
             <p>
               Products are saved as a quote request. Contact us via WhatsApp for latest pricing and factory quotes.
             </p>
+            <div style={{ display: "flex", gap: "0.75rem", marginTop: "0.5rem", flexWrap: "wrap" }}>
+              <a href={FACTORY_INFO.socials.facebook} target="_blank" rel="noopener noreferrer" style={{ color: "#86efac", fontSize: "0.85rem", fontWeight: 600 }} title="Aqua PPRC Facebook">Facebook</a>
+              <span style={{ color: "#526174" }}>·</span>
+              <a href={FACTORY_INFO.socials.instagram} target="_blank" rel="noopener noreferrer" style={{ color: "#86efac", fontSize: "0.85rem", fontWeight: 600 }} title="Aqua PPRC Instagram">Instagram</a>
+              <span style={{ color: "#526174" }}>·</span>
+              <a href={FACTORY_INFO.socials.tiktok} target="_blank" rel="noopener noreferrer" style={{ color: "#86efac", fontSize: "0.85rem", fontWeight: 600 }} title="Aqua PPRC TikTok">TikTok</a>
+              <span style={{ color: "#526174" }}>·</span>
+              <a href={FACTORY_INFO.socials.x} target="_blank" rel="noopener noreferrer" style={{ color: "#86efac", fontSize: "0.85rem", fontWeight: 600 }} title="Aqua PPRC X">X (Twitter)</a>
+            </div>
           </div>
         </div>
         <div className="footer-bottom">
